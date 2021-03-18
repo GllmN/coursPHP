@@ -1,0 +1,23 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulaire</title>
+</head>
+<body>
+<p>D2WM - 139(A)</p>
+<p>ENI</p>
+<?php
+require_once './FormulaireExo5.php';
+$form = new FormulaireExo5();
+$form->rajouterUnInput("id01");
+echo $form;
+?>
+</body>
+</html>
+
+

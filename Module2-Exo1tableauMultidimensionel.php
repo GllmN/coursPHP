@@ -17,35 +17,25 @@ var_dump($personnes);
 
 <p>"Exercice 2"</p>
 <?php
-// Premier Tableau
-$personne_prenom[] ='Rose';
-$personne_prenom[] ='Paul';
-$personne_prenom[] ='Hervé';
+// Soit ca :
+$caliendo = ["prenom" => "Julien", "ville" => "Brest", "age" => 36];
+$tab["Caliendo"] = $caliendo;
+var_dump($caliendo);
 
-// Deuxième Tableau
-$personne_age[] = '22';
-$personne_age[] = '33';
-$personne_age[] = '57';
-
-// Troisième Tableau
-$personne_ville[] = 'Nice';
-$personne_ville[] = 'Strasbourg';
-$personne_ville[] = 'Paris';
-
-
+// ou ça :
+$personne = ["Caliendo" => ["prenom" => "Julien", "ville"=>"Brest"]];
+$personne = ["Rose" => ["prenom" => "Martin", "ville"=>"Paris"]];
+var_dump($personne);
 ?>
 
 <p>"Exercice 3"</p>
 <?php
 
-$dupont = array(
-    'PRENOM' => 'Gérard',
-    'VILLE' => 'PARIS',
-    'AGE' => 67
-);
-
-foreach ($dupont as $item) {
-    echo $item.'<br/>';
+foreach ($tab as $valeurs) {
+    foreach ($valeurs as $cle => $v) {
+        echo "$cle - $v \n";
+    }
+    echo "------------------------ \n";
 }
 
 $badin = array(
@@ -53,12 +43,28 @@ $badin = array(
     'VILLE' => 'NANTES',
     'AGE' => 31
 );
-
-foreach ($badin as $item) {
-    echo $item.'<br/>';
+foreach ($badin as $clef) {
+    echo $clef.'<br/>';
 }
 ?>
 
+<p>"Exercice 4"</p>
+<?php
+$mails = ['jean@eni.fr', 'fred@linux.net', 'lea@renault.fr', 'caroline@eni.fr','contact@eni-ecole.fr', 'valentina@ferrari.it', 'melanie@eni-ecole.fr','philippe@eni.fr', 'typhaine@belfort.fr', 'louis@leparisien.fr'];
+$fqdns = ["eni.fr" => 0, "linux.net" =>0];
+// parcourir le tableau
+foreach ($mails as $mail) {
+    // exploser chaque adresse mail pour récuperer le "apres @", et recuperer le deuxième élément
+    $fqdn = explode('@', $mail) [1];
+    $leServeur = $fqdn[1];
+    // Incrémenter le compteur en fonction du FQDN
+    if (isset($fqdns[$fqdn])) {
+        $fqdns[$fqdn]++;
+    }
+}
+
+var_dump($fqdns);
+?>
 
 <!doctype html>
 <html lang="en">
