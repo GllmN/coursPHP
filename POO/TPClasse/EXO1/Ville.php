@@ -38,6 +38,7 @@ class Ville
         $this->departement = $departement;
     }
 
+// La méthode Tostring est appelé automatiquement lorsque l'instance est traité comme une chaine de caractère
     public function __toString() {
         return 'La ville de '.$this->nom.' est dans le département '.$this->departement.'.';
     }

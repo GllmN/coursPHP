@@ -1,0 +1,21 @@
+body{
+    text-align: center;
+}
+
+form{
+    text-align: center;
+    width: 50%;
+}
+
+input{
+    width: 200px;
+    margin: 5px;
+}
+
+p {
+    width: 50%;
+}
+
+#text {
+    width: 50px;
+}

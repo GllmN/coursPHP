@@ -18,7 +18,7 @@ class FormulaireExo5
     }
 
     public function __toString(){
-        $this->formulaire .= "</fieldset></form>";
+        $this->formulaire .= "<input type='submit' value='Envoyer'></fieldset></form>";
         return $this->formulaire;
     }
 }

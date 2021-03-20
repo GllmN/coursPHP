@@ -1,7 +1,7 @@
 <?php
 require_once "./Voiture.php";
 
-$tesla = new Voiture("Tesla", "3");
+$tesla = new Modele("Tesla", "3");
 echo $tesla;
 echo "\n";
 $tesla->setModele("S");

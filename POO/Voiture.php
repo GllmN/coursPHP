@@ -7,7 +7,7 @@ class Voiture extends Vehicule
     private $modele;
 
     /**
-     * Voiture constructor.
+     * Modele constructor.
      * @param $marque
      * @param $modele
      */

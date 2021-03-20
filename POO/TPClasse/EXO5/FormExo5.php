@@ -9,8 +9,6 @@
     <title>Formulaire</title>
 </head>
 <body>
-<p>D2WM - 139(A)</p>
-<p>ENI</p>
 <?php
 require_once './FormulaireExo5.php';
 $form = new FormulaireExo5();

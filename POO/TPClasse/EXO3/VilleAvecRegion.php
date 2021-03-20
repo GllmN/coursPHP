@@ -1,5 +1,5 @@
 <?php
-//require_once "./VilleExo2.php";
+
 require_once "./Ville.php";
 
 class VilleAvecRegion extends Ville
@@ -20,6 +20,7 @@ class VilleAvecRegion extends Ville
     public function __toString()
     {
         $recup = parent::__toString();
+        // ICI la fonction strlen permet d'enlever une partie des caractères de la chaine de caractère
         $recup = substr($recup, 0 ,strlen($recup) - 4);
         return $recup.' de la region'. $this->region. '<br>';
 
